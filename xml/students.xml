@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <name>Joe Jones</name>
+        <year>Soph.</year>
+        <testgrade>95</testgrade>
+    </student>
+    <student>
+        <name>Alice Brown</name>
+        <year>senior</year>
+        <testgrade>97</testgrade>
+    </student>
+    <student>
+        <name>Sam Smith</name>
+        <year>senior</year>
+        <testgrade>90</testgrade>
+    </student>
+</students>
