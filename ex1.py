@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-
+import xml.etree.ElementTree as ET
 
 class Coutry:
     def __init__(self, code, handle, continent, iso):
@@ -22,6 +22,7 @@ soup = BeautifulSoup(xml_file, features="xml")
 
 dict_continent = {}
 
+
 for tag in soup.find_all("country"):
      if tag["continent"] not in dict_continent.keys():
          continentX = Continent(tag["continent"], 1, [Coutry(tag["code"], tag.text, tag["continent"], tag["iso"])])
@@ -30,4 +31,23 @@ for tag in soup.find_all("country"):
          continentX = dict_continent[tag["continent"]]
          continentX.contries.append(Coutry(tag["code"], tag.text, tag["continent"], tag["iso"]))
 
+data = ET.Element('continents')
 
+# criação da tag root
+def criar_continente(self, c1):
+    self.continente.text = c1
+
+# criação das tags children e associoação de valores
+for key in dict_continent.keys():
+    continente = ET.SubElement(data, 'continente')
+
+    nome = ET.SubElement(continente, 'nome')
+    nome.text = dict_continent[key].name
+
+    nPaises = ET.SubElement(continente, 'nPaises')
+    nPaises.text = str(len(dict_continent[key].contries))
+
+# criação do documento xml
+b_xml = ET.tostring(data)
+with open("Exercício1.xml", "wb") as f:
+    f.write(b_xml)
