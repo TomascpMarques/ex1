@@ -1,0 +1,20 @@
+<biblioteca>
+    <book genre="Dystopian" nLivros="2">
+        <nome>['Nineteen Eighty-Four: A Novel', 'Brave New World']</nome>
+    </book>
+    <book genre="Psychology" nLivros="1">
+        <nome>['The Doors of Perception']</nome>
+    </book>
+    <book genre="Cyberpunk" nLivros="1">
+        <nome>['Neuromancer']</nome>
+    </book>
+    <book genre="Computer Security" nLivros="1">
+        <nome>['Hacking: The Art of Exploitation']</nome>
+    </book>
+    <book genre="Machine Learning" nLivros="1">
+        <nome>['Deep Learning with Python']</nome>
+    </book>
+    <book genre="Philosophy" nLivros="2">
+        <nome>['Critique of Pure Reason', 'The World as Will and Representation']</nome>
+    </book>
+</biblioteca>
