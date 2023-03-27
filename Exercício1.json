@@ -1,0 +1,54 @@
+{
+  "continents": {
+    "continente": [
+      {
+        "nome": "asia",
+        "nPaises": "49"
+      },
+      {
+        "nome": "europe",
+        "nPaises": "50"
+      },
+      {
+        "nome": "africa",
+        "nPaises": "58"
+      },
+      {
+        "nome": "polynesia",
+        "nPaises": "7"
+      },
+      {
+        "nome": "north america",
+        "nPaises": "29"
+      },
+      {
+        "nome": "antarctica",
+        "nPaises": "4"
+      },
+      {
+        "nome": "south america",
+        "nPaises": "14"
+      },
+      {
+        "nome": "australasia",
+        "nPaises": "15"
+      },
+      {
+        "nome": "central america",
+        "nPaises": "7"
+      },
+      {
+        "nome": "melanesia",
+        "nPaises": "2"
+      },
+      {
+        "nome": "micronesia",
+        "nPaises": "1"
+      },
+      {
+        "nome": "none",
+        "nPaises": "1"
+      }
+    ]
+  }
+}
