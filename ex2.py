@@ -1,3 +1,6 @@
+import json
+
+import lxml.etree as ET
 from bs4 import BeautifulSoup
 
 fd = open('xml/gamelist.xml', 'r')
@@ -55,5 +58,13 @@ for game in games:
     gameXML.games.append(tempXML)
 
 print(gameXML.prettify())
+
+# TO JSON
+with open("json/ex2.json", mode='w') as fl:
+    fl.write("{")
+    for game in games:
+        fl.write(json.dumps(game.__dict__) + ',')
+    fl.write("}")
+
 
 fd.close()
