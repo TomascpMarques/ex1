@@ -1,5 +1,9 @@
 from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
+<<<<<<< HEAD
+=======
+import xmltodict, json
+>>>>>>> a36fe9beb575e0a5f145b4e3464217164fb7e8db
 
 class Coutry:
     def __init__(self, code, handle, continent, iso):
@@ -33,10 +37,13 @@ for tag in soup.find_all("country"):
 
 data = ET.Element('continents')
 
+<<<<<<< HEAD
 # criação da tag root
 def criar_continente(self, c1):
     self.continente.text = c1
 
+=======
+>>>>>>> a36fe9beb575e0a5f145b4e3464217164fb7e8db
 # criação das tags children e associoação de valores
 for key in dict_continent.keys():
     continente = ET.SubElement(data, 'continente')
@@ -46,8 +53,23 @@ for key in dict_continent.keys():
 
     nPaises = ET.SubElement(continente, 'nPaises')
     nPaises.text = str(len(dict_continent[key].contries))
+<<<<<<< HEAD
 
 # criação do documento xml
 b_xml = ET.tostring(data)
 with open("Exercício1.xml", "wb") as f:
     f.write(b_xml)
+=======
+
+# criação do documento xml
+b_xml = ET.tostring(data)
+with open("Exercício1.xml", "wb") as f:
+    f.write(b_xml)
+
+fd2 = open("Exercício1.xml", "r")
+xmltopythonFile = fd2.read()
+souppy = BeautifulSoup(xmltopythonFile, features="xml")
+print(souppy.prettify())
+xmlDict = xmltodict.parse(souppy.prettify())
+open("Exercício1.json", "w").write(json.dumps(xmlDict))
+>>>>>>> a36fe9beb575e0a5f145b4e3464217164fb7e8db
